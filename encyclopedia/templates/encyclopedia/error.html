@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+    <h1>Invalid Name</h1>
+    <p>Error: page called "{{title}}" already exits. Go back to the <a href="{% url 'index' %}">main page</a>.</p>
+
+{% endblock %}

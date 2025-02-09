@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit Page
+{% endblock %}
+
+{% block body %}
+
+<h1>Edit Page:</h1>
+
+<p>Write Markdown below to edit the article about "{{title}}"</p>
+    <form method="post" >
+        {% csrf_token %}
+        {{edit}}
+        <input class="btn btn-dark" type="submit" value="Save"/>
+    </form>
+{% endblock %}

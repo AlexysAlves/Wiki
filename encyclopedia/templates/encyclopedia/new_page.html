@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    New Page
+{% endblock %}
+
+{% block body %}
+
+  <h1>New Page:</h1>
+
+  <p>Write Markdown below to create a new article for the Encyclopedia.</p>
+
+  <form action="{% url 'new_page' %}" method="post">
+    {% csrf_token %}
+    {{ create_form }}
+    <input class= "btn btn-dark" type="submit" value="Save">
+  </form>
+
+{% endblock %}
